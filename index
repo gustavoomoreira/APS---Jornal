@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" 
+    content="width=device-width, initial-scale=1">
+    <title>Login - Jornal</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        /* Resetando margens, padding e bordas globais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            border: none;
+        }
+
+        /* Configurações gerais do corpo */
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Estilo do contêiner de login */
+        .login-container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            border: 1px solid #ddd;
+            background-image: url('https://www.transparenttextures.com/patterns/asfalt.png');
+            background-size: cover;
+        }
+
+        h1 {
+            font-size: 32px;
+            text-align: center;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Estilo para os rótulos dos campos */
+        .form-label {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        /* Estilo dos campos de entrada */
+        input {
+            width: 100%;
+            height: 45px;
+            padding: 0 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 20px;
+            transition: border-color 0.3s ease;
+        }
+
+        /* Efeito de foco para os campos de entrada */
+        input:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        /* Estilo do botão */
+        .btn-primary {
+            width: 100%;
+            padding: 12px;
+            background-color: #6c757d;
+            border: none;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn-primary:hover {
+            background-color: #5a6268;
+        }
+
+        /* Estilo do botão de mostrar senha */
+        .btn-show-password {
+            position: absolute;
+            right: 10px;
+            top: 35px;
+            cursor: pointer;
+            color: #333;
+            font-size: 20px;
+        }
+
+        /* Adicionando a área de link do cadastro */
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 16px;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilo para a checkbox */
+        .form-check-label {
+            font-size: 16px;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <h1>Login</h1>
+        <form method="post" action="login.php">
+            <div class="mb-3">
+                <label for="email" class="form-label">Endereço de e-mail</label>
+                <input id="email" type="email" class="form-control" maxlength="80" name="email" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">Nunca compartilharemos o seu e-mail</div>
+            </div>
+            <div class="mb-3 position-relative">
+                <label for="senha" class="form-label">Senha</label>
+                <input type="password" class="form-control" maxlength="100" name="senha" id="senha">
+                <span class="btn-show-password" onclick="togglePassword()">👁️</span>
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Mantenha-me conectado</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Entrar</button>
+            <a href="usuario.html">Cadastre-se</a>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Funções adicionais (mostrar/ocultar senha) -->
+    <script src="assets/js/funcoes.js"></script>
+</body>
+
+</html>
