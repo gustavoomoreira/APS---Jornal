@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jornal Online</title>
+  
+  <!-- Google Fonts e AOS -->
+  <link href="https://fonts.googleapis.com/css2?family=Georgia&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #6c757d;
+      color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .banner {
+      background-color: white;
+      padding: 40px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      margin-bottom: 40px;
+    }
+
+    .banner h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 25px;
+      background-color: #6c757d;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #5a6268;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    article {
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
+    }
+
+    article:hover {
+      transform: scale(1.01);
+    }
+
+    article img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    article h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    article p {
+      font-size: 16px;
+      color: #555;
+    }
+
+    article a {
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: bold;
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    article a:hover {
+      text-decoration: underline;
+    }
+
+    .destaques, .opiniao, .tempo {
+      background-color: white;
+      margin-top: 40px;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .destaques h2, .opiniao h2, .tempo h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+
+    .tempo p {
+      font-size: 16px;
+      margin: 8px 0;
+    }
+
+    footer {
+      background-color: #6c757d;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav ul {
+        justify-content: center;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">Jornal Online</div>
+    <nav>
+      <ul>
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Política</a></li>
+        <li><a href="#">Economia</a></li>
+        <li><a href="#">Esportes</a></li>
+        <li><a href="#">Cultura</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="banner" data-aos="fade-up">
+      <h1>Manchete Principal do Dia</h1>
+      <img src="assets/imagem/2023-02-08t190234z-721260982-up1ej281gw7bf-rtrmadp-3-soccer-club-aly-mad-report.webp" alt="Imagem Manchete">
+    <br>
+      <p>Escalação do Brasil: Ancelotti testa mudanças no ataque contra o Paraguai.</p>
+      <a href="#" class="btn">Leia mais</a>
+    </section>
+
+    <section class="noticias" data-aos="fade-up">
+      <h2>Últimas Notícias</h2>
+      <div class="grid">
+        <article>
+          <img src="assets/imagem/Imagem do WhatsApp de 2025-06-03 à(s) 21.34.28_4d9b7164.jpg" alt="Imagem Notícia 1">
+          <h3>Polícia Civil faz megaoperação no Complexo de Israel, na zona norte do Rio</h3>
+          <p>Ação mira facção Terceiro Comando Puro (TCP), comandanda pelo narcotraficante Peixão; Devido ao confronto, a avenida Brasil foi fechada no trecho.</p>
+          <a href="#">Leia mais</a>
+        </article>
+        <article>
+          <img src="assets/imagem/Imagem do WhatsApp de 2025-06-03 à(s) 21.34.28_f5872c44.jpg" alt="Imagem Notícia 2">
+          <h3>IBGE: Inflação desacelera a 0,26% em maio</h3>
+          <p>Resultado ficou abaixo da taxa de 0,43% registrada em abril.</p>
+          <a href="#">Leia mais</a>
+        </article>
+        <article>
+          <img src="assets/imagem/tagreuters.com2025binary_LYNXNPEL520R7-BASEIMAGE.webp" alt="Imagem Notícia 3">
+          <h3>Pesquisa: no DF, gestão Lula é desaprovada por 62,6%; aprovação é de 34,4%</h3>
+          <p>Levantamento ouviu 1.522 eleitores, entre os dias 31 de maio e 4 de junho; margem de erro é de 2,6 pontos percentuais, para mais ou para menos.</p>
+          <a href="#">Leia mais</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="destaques" data-aos="fade-up">
+      <h2>Destaques da Semana</h2>
+      <div class="grid">
+        <article>
+          <h3>Análise Especial</h3>
+          <p>Confira uma análise aprofundada sobre os principais acontecimentos da semana.</p>
+          <a href="#">Leia mais</a>
+        </article>
+        <article>
+          <h3>Entrevista Exclusiva</h3>
+          <p>Conversamos com uma personalidade influente sobre os desafios atuais.</p>
+          <a href="#">Leia mais</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="opiniao" data-aos="fade-up">
+      <h2>Coluna de Opinião</h2>
+      <div class="grid">
+        <article>
+          <h3>Visão Crítica</h3>
+          <p>Reflexão sobre as decisões políticas mais recentes e seus impactos sociais.</p>
+          <a href="#">Leia mais</a>
+        </article>
+        <article>
+          <h3>Cultura em Foco</h3>
+          <p>A influência da arte no cenário atual e como ela molda comportamentos.</p>
+          <a href="#">Leia mais</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="tempo" data-aos="fade-up">
+      <h2>Previsão do Tempo</h2>
+      <p>🌤️ Hoje: Sol com algumas nuvens | Máx: 27°C - Mín: 18°C</p>
+      <p>🌧️ Amanhã: Chuva leve pela manhã | Máx: 23°C - Mín: 17°C</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Jornal Online - Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
